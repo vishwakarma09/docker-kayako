@@ -23,4 +23,4 @@ RUN service mysql start &&  \
 
 RUN update-rc.d mysql defaults && update-rc.d php5-fpm defaults && update-rc.d nginx defaults
 
-RUN chmod +x install.sh && ./install.sh
+RUN chmod +x install.sh && /bin/bash install.sh

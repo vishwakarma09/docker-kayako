@@ -5,17 +5,19 @@ db_name="fusion"
 
 #enter admin CP details here
 company_name="test"
-product_url="http://localhost/"
+product_url="http://sandzvps.tk/"
 first_name="admin"
 last_name="admin"
 username="admin"
 password="password"
 email="test@test.com"
+productfiles=""
+licensekey=""
 
 #extracting product files to document root
-#tar -xzf product.tar.gz -C /usr/share/nginx/html/
-mv /product.tar.gz/*/upload/* /usr/share/nginx/html/.
-#mv /usr/share/nginx/html/f*/upload/* /usr/share/nginx/html/.
+wget -o product.tar.gz "$productfiles"
+tar -xzf product.tar.gz -C /usr/share/nginx/html/
+mv /usr/share/nginx/html/*/upload/* /usr/share/nginx/html/.
 chown -R www-data:www-data /usr/share/nginx/html/
 chmod -R 777 /usr/share/nginx/html/{__apps,__swift/files,__swift/cache,__swift/logs,__swift/geoip}
 cp /usr/share/nginx/html/__swift/config/config.php.new /usr/share/nginx/html/__swift/config/config.php

@@ -6,8 +6,6 @@ RUN echo "mysql-server-5.6 mysql-server/root_password password redhat" | debconf
 RUN echo "mysql-server-5.6 mysql-server/root_password_again password redhat" | debconf-set-selections
 
 ADD nginx.conf nginx.conf
-ADD product.tar.gz product.tar.gz
-ADD key.php key.php
 ADD install.sh install.sh
 
 RUN apt-get update && apt-get install -y mysql-server-5.6 vim nginx php5 php5-cli php5-fpm php5-mysql php5-mcrypt php5-gd php5-curl php5-imap && \

@@ -11,9 +11,9 @@ last_name="admin"
 username="admin"
 password="password"
 email="test@test.com"
-productfiles="http://s3.amazonaws.com/kayako.builds/4.68.1-9777-ac5a20a/fusion_stable_sourceobf_4_68_1_9777_ac5a20a.tar.gz?AWSAccessKeyId=AKIAIXMXN4VUQTLBNKCQ&Expires=1419635974&Signature=gswhsUD3QVAuTvZlI6j8kPn0x54%3D"
-licensekey="https://my.kayako.com/index.php?/Backend/Product/DownloadKey/5853841"
-geoipfiles="http://s3.amazonaws.com/kayako.builds/5058.4.64.1.5058/geoiplite_stable_bin_4_64_1_5058.tar.gz?AWSAccessKeyId=AKIAIXMXN4VUQTLBNKCQ&Expires=1419635974&Signature=ft0wpeNV697CU0GrfT0%2FtsYn7U4%3D"
+productfiles="http://ghostnode.tk/fusion.tar.gz"
+licensekey="http://ghostnode.tk/key.php.txt"
+geoipfiles="http://ghostnode.tk/geoip.tar.gz"
 
 #extracting product files to document root
 wget -O product.tar.gz "$productfiles"

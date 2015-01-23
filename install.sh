@@ -48,5 +48,5 @@ rm -rf /usr/share/nginx/html/setup/
 cp /key.php /usr/share/nginx/html/key.php
 
 mysql -u $db_user $db_name -p$db_pass -e "update swsettings set data=\'$product_url\' where vkey='general_producturl';"
-rebuildurl="staff/index.php?/Core/Default/RebuildCache"
-wget "$product_url$rebuildurl"
+#rebuildurl="staff/index.php?/Core/Default/RebuildCache"
+#wget "$product_url$rebuildurl"

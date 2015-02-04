@@ -47,9 +47,13 @@ php console.setup.php $company_name test $first_name $last_name $username $passw
 rm -rf /usr/share/nginx/html/setup/
 cp /key.php /usr/share/nginx/html/key.php
 
-mysql -u $db_user $db_name -p$db_pass -e "update swsettings set data=\'$product_url\' where vkey='general_producturl';"
-#rebuildurl="staff/index.php?/Core/Default/RebuildCache"
-#wget "$product_url$rebuildurl"
+mysql -u $db_user $db_name -p$db_pass << EOF
+use $db_name;
+update swsettings set data='$product_url' where vkey='general_producturl';
+EOF
+
+rebuildurl="staff/index.php?/Core/Default/RebuildCache"
+wget "$product_url$rebuildurl"
 
 #give zero exit code
 exit 0
